@@ -46,13 +46,23 @@ function segundobuscar() {
  }
 
  function buscar(){
-    let URL="https://rickandmortyapi.com/api/character/"+primerarray+","+segundoarray;
+    let URL="https://rickandmortyapi.com/api/character/"+primerarray;
     console.log(URL)
     fetch (URL)
         .then(Response => Response.json())
         .then(data=>{
             document.getElementById("primergrupo").innerHTML =`<img src=${data[0].image}><img src=${data[1].image}><img src=${data[2].image}>`
 
+        
+        })
+ }
+
+ function buscar2(){
+    let URL="https://rickandmortyapi.com/api/character/"+segundoarray;
+    console.log(URL)
+    fetch (URL)
+        .then(Response => Response.json())
+        .then(data=>{
             document.getElementById("segundogrupo").innerHTML =`<img src=${data[0].image}><img src=${data[1].image}><img src=${data[2].image}>`
 
         })
