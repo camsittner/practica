@@ -2,15 +2,11 @@ primerarray = [];
 segundoarray = [];
 
 function primerbuscar() {
-   
     let valor = document.getElementById("primerimput").value
     
-    if (valor == " "){
-        alert("ingrese un valor no nulo")
-    }
     
     if (primerarray.includes(valor)==true){
-    alert("no se puede ingresar el numero repetido")
+        alert("no se puede ingresar el numero repetido")
     }
 
     if (primerarray.length<3 && primerarray.includes(valor)==false){
@@ -22,24 +18,34 @@ function primerbuscar() {
          document.getElementById("primerbutton").disabled = true
     }
 
+    if (primerarray.length==4){
+        document.getElementById("buscar").disabled = true
+    }
+
     console.log(primerarray);
 
 }
 
 function segundobuscar() {
     let valor = document.getElementById("segundoimput").value
-     if (segundoarray.includes(valor)==true){
-     alert("no se puede ingresar el valor repetido")
-     }
+
+    
+    if (segundoarray.includes(valor)==true){
+        alert("no se puede ingresar el valor repetido")
+    }
  
-     if (segundoarray.length<3 && segundoarray.includes(valor)==false){
+    if (segundoarray.length<3 && segundoarray.includes(valor)==false){
          segundoarray.push(valor)
-     }
+    }
  
-     if (segundoarray.length==3){
+    if (segundoarray.length==3){
          document.getElementById("segundoimput").disabled = true
          document.getElementById("segundobutton").disabled = true
-     }
+    }
+    
+    if (segundoarray.length==4){
+        document.getElementById("buscar2").disabled = true
+    } 
  
      console.log(segundoarray);
  
