@@ -1,5 +1,6 @@
 //juan = new Persona(atributos);// camila = newPersona('camila','sittner',21)
 //poner: nombre,edad,apellido
+
 class Persona{
     constructor (nombre, apellido, fecha_nacimiento){
         this.nombre = nombre;
